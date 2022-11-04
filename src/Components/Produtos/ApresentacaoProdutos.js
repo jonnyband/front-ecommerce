@@ -6,14 +6,14 @@ export const Card = ({ product }) => {
     return (
         <>
         
-        <img className="topCardImage" src={product.nomeImagemProduto} />
+        <img src={`data:image/png;base64,${product.imagem}`} />
         
-        <div className="card">
-            <span>{product.nomeProduto}</span>
+        <div>
+            <span>{product.nome}</span>
             <span>R${product.valorUnitario}</span>
-            <AdicionarNoCarrinho
+            {/* <AdicionarNoCarrinho
             product={product}
-            ></AdicionarNoCarrinho>
+            ></AdicionarNoCarrinho> */}
         </div>
         
         </>
