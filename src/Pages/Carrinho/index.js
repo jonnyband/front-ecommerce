@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import {React,  useContext } from "react";
 import { BarraDePesquisa } from "../../Components/BarraDePesquisa/index"
 import { Context } from "../../Contexts/index"
 import { ApresentacaoCarrinho } from "../../Components/Carrinho/ApresentacaoCarrinho"

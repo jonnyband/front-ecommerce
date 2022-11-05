@@ -3,7 +3,7 @@ import { Context } from "../../Contexts/index"
 
 export const RemoverDoCarrinho = ({product}) => {
     const {removeProduct} = useContext(Context)
-    console.log(product.idProduct)
+    console.log(product.id)
 
     return (
         <>

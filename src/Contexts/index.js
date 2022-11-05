@@ -1,5 +1,5 @@
 import React from "react";
-import { createContext, Children } from "react";
+import { createContext, children } from "react";
 import { useState, useEffect } from "react";
 
 export const Context = createContext()
@@ -21,9 +21,9 @@ export const CartContent = ({ children }) => {
     )
 
     function addProduct(item) {
-        const add = cart
-        add.push(item)
-        setCart(add)
+       
+        
+        setCart([...cart, item])
         console.log(cart)
     }
 
