@@ -14,7 +14,9 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 img{
     height: 20vh;
+    width: 20vh;
     border-radius: 4px;
+
 }
 
 h1{
@@ -26,15 +28,30 @@ div{
     padding: 10px;
 }
 
+`
+
+export const Div = styled.div`
+text-align: end;
 
 button{
     height: 6vh;
     width: 15vh;
-    margin-left: 46vh;
+    margin-left: 30vh;
+    margin-top: 7vh ;
     border: 2px solid white;
     border-radius: 10px;
     color: white;
     font-size: 1.2rem;
     background-color: #3BB273;
+    
+    cursor: pointer;
+    :hover{
+    opacity: 0.9;
+    }  
 }
-`
+span{
+    font-size: 2.5rem;
+}
+`;
+
+

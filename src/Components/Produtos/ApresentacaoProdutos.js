@@ -1,6 +1,6 @@
 import React from "react";
 import { AdicionarNoCarrinho } from "../Carrinho/AdicionarNoCarrinho"
-import { Container } from "./styled";
+import { Container, Div } from "./styled";
 
 export const Card = ({ product }) => {
     
@@ -10,14 +10,16 @@ export const Card = ({ product }) => {
         <img src={`data:image/png;base64,${product.imagem}`} />
         
         <div>
-           
             <h1>{product.nome}</h1><br></br>
             <span>{product.descricao}</span><br></br>
-            <h2>R${product.valorUnitario}</h2>
+            
+        </div>
+        <Div>
+        <span>R${product.valorUnitario}</span>
             <AdicionarNoCarrinho
             product={product}
             ></AdicionarNoCarrinho>
-        </div>
+        </Div>
         
         </Container>
     )

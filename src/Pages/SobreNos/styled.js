@@ -99,6 +99,4 @@ export const Div = styled.div`
 export const Header = styled.div`
 text-align: justify;
 width: 60%;
-
-
 `;
