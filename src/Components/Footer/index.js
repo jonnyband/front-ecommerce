@@ -34,7 +34,7 @@ export const Footer = () => {
                         <div class="socio__perfil">
                             <a href="" target="_blank">
                                 <img src=""/>
-                                Mateus Araujo
+                                Mateus Tavares
                             </a>
                         </div>
                     </div>
