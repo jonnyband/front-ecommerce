@@ -28,7 +28,7 @@ div{
 
 
 button{
-    height: 4vh;
+    height: 6vh;
     width: 15vh;
     margin-left: 46vh;
     border: 2px solid white;

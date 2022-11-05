@@ -3,14 +3,14 @@ import { createContext, Children } from "react";
 import { useState, useEffect } from "react";
 
 export const Context = createContext()
-export const CartContent = ({ Children }) => {
+export const CartContent = ({ children }) => {
     const [fullPrice, setFullPrice] = useState()
     const [cart, setCart] = useState([])
 
     useEffect(() => {
         let soma = 0
         cart.map(item => {
-            soma = soma + Number(item.valorUnitario)
+            soma += Number(item.valorUnitario)
         })
         
         console.log(cart)
@@ -46,7 +46,7 @@ export const CartContent = ({ Children }) => {
         <Context.Provider
             value={{cart, addProduct, removeProduct, removeAllProducts, fullPrice}}
         >
-            {Children}
+            {children}
         </Context.Provider>
     )
 }

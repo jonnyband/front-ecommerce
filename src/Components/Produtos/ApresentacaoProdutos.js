@@ -5,18 +5,18 @@ import { Container } from "./styled";
 export const Card = ({ product }) => {
     
     return (
-        <Container>
+        <Container key={product.id}>
         
         <img src={`data:image/png;base64,${product.imagem}`} />
         
         <div>
+           
             <h1>{product.nome}</h1><br></br>
             <span>{product.descricao}</span><br></br>
             <h2>R${product.valorUnitario}</h2>
-            <button>Comprar</button>
-            {/* <AdicionarNoCarrinho
+            <AdicionarNoCarrinho
             product={product}
-            ></AdicionarNoCarrinho> */}
+            ></AdicionarNoCarrinho>
         </div>
         
         </Container>
