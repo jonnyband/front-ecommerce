@@ -9,3 +9,7 @@ return api.get(`produtos`)
 
 }
 
+export const getProductByID = (id) =>{
+    return api.get(`produtos/${id}`)
+}
+

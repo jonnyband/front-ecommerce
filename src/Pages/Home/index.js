@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import {Buffer} from 'buffer';
 import {getProduct} from "../../Service/productService";
 import { Card } from "../../Components/Produtos/ApresentacaoProdutos";
+import {Container, ProductRow} from "./styled"
 
 export function Home(){
 
@@ -26,7 +27,7 @@ console.log(product)
 
 
 return(
-    <div>
+    <Container>
       {product.map((p)=>{
         return(
             <Card
@@ -34,7 +35,7 @@ return(
             />
         )
       })}
-    </div>
+    </Container>
 )
 
 
