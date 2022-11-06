@@ -14,12 +14,8 @@ export const EncerrarPedido = () => {
     [cart]);
 
     function ProductsTotal() {
-        let soma = 0;
-        for (let i=0; i < cart.lenght; i++) {
-            soma += parseFloat(cart[i].valorUnitario);
-        }
-        setItemsTotal(soma);
-        console.log(soma);
+        
+        setItemsTotal(cart.reduce((a,b)=>{a.valorUnitario + b.valorUnitario}));
     }
 
     return (

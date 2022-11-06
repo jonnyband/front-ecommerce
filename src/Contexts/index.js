@@ -21,19 +21,14 @@ export const CartContent = ({ children }) => {
     )
 
     function addProduct(item) {
-       
-        
+          
         setCart([...cart, item])
         console.log(cart)
     }
 
     function removeProduct(id) {
         
-        for (var i=0; i < cart.length; i++) {
-            if (cart[i] === id) {
-                cart.splice(i, 1)
-            }
-        }
+        setCart([...cart.filter(c=>c.id!==id)])
         console.log(cart)
     }
 
