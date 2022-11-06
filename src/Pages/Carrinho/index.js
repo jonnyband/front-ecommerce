@@ -10,7 +10,7 @@ export const Carrinho = () => {
     return (
         <div>
             <BarraDePesquisa/>
-            <ApresentacaoCarrinho lista={cart}/>
+            <ApresentacaoCarrinho/>
             <FecharPedido/>
         </div>
     )

@@ -6,7 +6,7 @@ import {Container, ProductRow} from "./styled"
 import { BsCart } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
-export function Home({history}){
+export function Home(){
 const navigate = useNavigate();
 
 
@@ -34,6 +34,9 @@ return(
     
     <Container><button onClick={()=> {navigate('/carrinho')}}>
         <BsCart ></BsCart>
+        </button>
+        <button onClick={()=> {navigate('/cadastro')}}>
+        Cadastre-se
         </button>
       {product.map((p)=>{
         return(

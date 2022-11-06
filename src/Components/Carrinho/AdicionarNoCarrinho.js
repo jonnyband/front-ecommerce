@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import {Context} from '../../Contexts/index'
+import {Context} from '../../Contexts/';
 
 export const AdicionarNoCarrinho = ({ product }) => {
     const { addProduct } = useContext(Context)
