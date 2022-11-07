@@ -17,7 +17,6 @@ return(
     <Route path="/sobre" element={<Sobre/>}/>
     <Route path="/cadastro" element={<SignUp/>}/>
     <Route path="/" element={<Home/>}/>
-
 </Routes>
 
 

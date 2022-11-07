@@ -6,7 +6,6 @@ flex-direction: column;
 background: #015958;
 height: 100vh;
 color: white;
-align-items: center;
 `;
 
 export const Content = styled.div`

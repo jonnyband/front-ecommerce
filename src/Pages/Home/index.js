@@ -5,6 +5,7 @@ import { Card } from "../../Components/Produtos/ApresentacaoProdutos";
 import {Container, ProductRow} from "./styled"
 import { BsCart } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from "../../Components/Navegacao/Navbar";
 
 export function Home(){
 const navigate = useNavigate();
@@ -31,7 +32,8 @@ console.log(product)
 
 
 return(
-    
+    <>
+    <Navbar/>
     <Container><button onClick={()=> {navigate('/carrinho')}}>
         <BsCart ></BsCart>
         </button>
@@ -46,6 +48,7 @@ return(
         )
       })}
     </Container>
+    </>
 )
 
 

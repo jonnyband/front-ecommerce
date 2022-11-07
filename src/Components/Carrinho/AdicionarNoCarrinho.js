@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import {Context} from '../../Contexts/';
+import { Navbar } from "../Navegacao/Navbar";
 
 export const AdicionarNoCarrinho = ({ product }) => {
     const { addProduct } = useContext(Context)

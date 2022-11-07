@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { api } from "../../Service/api";
 import { Container } from "./styled";
 import { postAddress, postUser} from "../../Service/userService";
+import { Navbar } from "../../Components/Navegacao/Navbar";
 
 export function SignUp(){
 
@@ -56,8 +57,9 @@ const submitUser = (e) =>{
 }
 
 return(
+  <>
+  <Navbar/>
 <Container>
-
 
 <form onSubmit={submitUser}>
   <label >Nome de Usuário:</label><br></br>
@@ -89,6 +91,7 @@ return(
 </form> 
 
 </Container>
+</>
 
 )
 }
