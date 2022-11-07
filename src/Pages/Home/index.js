@@ -40,6 +40,9 @@ return(
         <button onClick={()=> {navigate('/cadastro')}}>
         Cadastre-se
         </button>
+        <button onClick={() => {navigate('/login')}}>
+            Login
+        </button>
       {product.map((p)=>{
         return(
             <Card
