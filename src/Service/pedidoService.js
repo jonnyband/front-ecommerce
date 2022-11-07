@@ -11,7 +11,7 @@ return api.get(`pedido`)
 
 
 export const postOrder = (order) => {
-    return api.post(`pedido`, JSON.stringify(order))
+    return api.post(`pedido`, order)
 }
 
 

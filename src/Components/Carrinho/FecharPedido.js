@@ -3,9 +3,9 @@ import { Context } from '../../Contexts/index';
 import axios from "axios";
 
 export const FecharPedido = () => {
-    const { cart, removeAllProducts } = useContext(Context);
+    const { cart, item, removeAllProducts } = useContext(Context);
     
-    console.log(cart);
+    // console.log(cart);
 
     function jsonProduto() {
         let client = [];
@@ -20,7 +20,7 @@ export const FecharPedido = () => {
         test(client);
     }
 
-    function test(client) {
+    function executeOrder() {
         let pedido = {
             // ???????????
         }

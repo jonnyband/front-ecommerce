@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 export const Context = createContext()
 export const CartContent = ({ children }) => {
     const [fullPrice, setFullPrice] = useState()
+    const [item, setItem] = useState([])
     const [cart, setCart] = useState([])
 
     useEffect(() => {
@@ -12,6 +13,10 @@ export const CartContent = ({ children }) => {
         cart.map(item => {
             soma += Number(item.valorUnitario)
         })
+
+        // cart.reduce(a,b=> {
+        //     a.valorUnitario + b.valorUnitario
+        // })
         
         console.log(cart)
         setFullPrice(soma)
@@ -20,15 +25,32 @@ export const CartContent = ({ children }) => {
         [cart]
     )
 
-    function addProduct(item) {
+    function addProduct(product) {
           
-        setCart([...cart, item])
+        let a = {
+            quantidade:1,
+            produto:product,
+            valorBruto:product.valorUnitario,
+        }
+        setCart([...cart, a])
         console.log(cart)
+    }
+
+    
+    function addAmount(e, c) {
+          
+
+         setCart(cart.map((i)=> {if(i.produto.id === c.produto.id){
+            i.quantidade = e.target.value;
+        }
+        return i;}
+        ))
+     
     }
 
     function removeProduct(id) {
         
-        setCart([...cart.filter(c=>c.id!==id)])
+        setCart([...cart.filter(c=>c.produto.id!==id)])
         console.log(cart)
     }
 
@@ -39,7 +61,7 @@ export const CartContent = ({ children }) => {
 
     return (
         <Context.Provider
-            value={{cart, addProduct, removeProduct, removeAllProducts, fullPrice}}
+            value={{cart, addProduct, removeProduct, removeAllProducts, item, addAmount}}
         >
             {children}
         </Context.Provider>

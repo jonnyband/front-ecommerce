@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { Context } from "../../Contexts/index"
 
-export const RemoverDoCarrinho = ({product}) => {
+export const RemoverDoCarrinho = ({item}) => {
     const {removeProduct} = useContext(Context)
-    console.log(product.id)
+    console.log(item.produto.id)
 
     return (
         <>
-            <button onClick={() => removeProduct(product.id)}>Remover</button>
+            <button onClick={() => removeProduct(item.produto.id)}>Remover</button>
         </>
     )
 }
