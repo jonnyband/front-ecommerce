@@ -5,6 +5,7 @@ import { Sobre } from "../Pages/SobreNos"
 import { Home } from "../Pages/Home";
 import { SignUp } from "../Pages/UserSignUp";
 import { Login } from "../Pages/Login/login"
+import { UserMenu } from "../Pages/UserMenu";
 
 
 export function Router() {
@@ -17,6 +18,7 @@ return(
     <Route path="/contato" element={<Contato/>}/> 
     <Route path="/sobre" element={<Sobre/>}/>
     <Route path="/cadastro" element={<SignUp/>}/>
+    <Route path="/menu" element={<UserMenu/>}/>
     <Route path="/" element={<Home/>}/>
     <Route path="/login" element={<Login/>}/>
 

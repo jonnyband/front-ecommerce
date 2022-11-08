@@ -4,7 +4,7 @@ import { getUserByID } from '../../Service/userService'
 import "./styled.css";
 
 export const Login = () => {
-    const [email, setEmail] = useState('')
+    const [email, setEmail] = useState()
     const [password, setPassword] = useState('')
     const [clientes, setClientes] = useState([])
 
@@ -27,13 +27,13 @@ export const Login = () => {
 
     
 
-   function handleSubmit(e,password){
-    e.preventDefault()
-    console.log('submit', {email, password})
-    getUserByID(14).then(
-      response => {setClientes(response.data)
+   function handleSubmit(e){
+e.preventDefault();
+    localStorage.setItem('id',email)
+    getUserByID(parseInt(email)).then(
+      response => {
         localStorage.setItem('logado', true)
-    localStorage.setItem('id', clientes.id)
+    localStorage.setItem('id', response.data.id)
     navigate('/')}
     
     ).catch((error)=>console.log(error))
@@ -50,11 +50,10 @@ export const Login = () => {
                     <div className="wrap-input">
                       <input
                         className={email !== "" ? "has-val input" : "input"}
-                        type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
-                      <span className="focus-input" data-placeholder="Email"></span>
+                      <span className="focus-input" data-placeholder="ID"></span>
                     </div>
         
                     <div className="wrap-input">

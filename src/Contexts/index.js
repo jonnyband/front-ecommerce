@@ -32,8 +32,7 @@ export const CartContent = ({ children }) => {
             valorBruto:product.valorUnitario,
             valorLiquido:0.0,
             produto:product,
-          
-           
+              
         }
         setCart([...cart, a])
         console.log(cart)
