@@ -37,7 +37,7 @@ Processos para conseguir rodar o app:
 ## 🎁 Considerações finais:
 
 * Projeto realizado pelos alunos da Residência em TIC/Software (Serratec) 2022.2 📢;
-* Agradecimento especial ao nosso professor Ramon, que passou essa matéria para a turma 🍺;
+* Agradecimento especial ao nosso professor Ramon, que passou essa matéria para a turma 👏;
 
 ---------------------------------------------------------------------------------------------------
 
