@@ -15,7 +15,9 @@ export const EncerrarPedido = () => {
 
     function ProductsTotal() {
         
-        setItemsTotal(cart.reduce((a,b)=>{a.valorUnitario + b.valorUnitario}));
+        setItemsTotal(cart.reduce((a,b)=>{
+            a.valorUnitario + b.valorUnitario
+        }));
     }
 
     return (

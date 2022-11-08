@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import {Context} from '../../Contexts/';
+import { Navbar } from "../Navegacao/Navbar";
 
 export const AdicionarNoCarrinho = ({ product }) => {
     const { addProduct } = useContext(Context)
@@ -8,7 +9,7 @@ export const AdicionarNoCarrinho = ({ product }) => {
         addProduct(product)
     }
 
-    return (
+    return(
         <>
             <button onClick={() => add(product)}>
                 <strong>Adicionar ao carrinho</strong>

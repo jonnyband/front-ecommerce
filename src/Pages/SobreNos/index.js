@@ -1,5 +1,6 @@
 import { Container, Content, Card, Buttons, Div, Header } from './styled.js'
 import { useState } from 'react';
+import { Navbar } from '../../Components/Navegacao/Navbar.js';
 
 export function Sobre() {
     const [selected, setSelected] = useState("")
@@ -38,11 +39,11 @@ export function Sobre() {
 
                         <Card>
                             <Div>
-                                <img src="https://avatars.githubusercontent.com/u/111091390?v=4" />
+                                <img src="https://avatars.githubusercontent.com/u/22997655?v=4" />
                                 <h1>João M</h1>
                             </Div>
                             <Buttons>
-                                <a target="_blank">
+                                <a href="https://github.com/jonnyband" target="_blank">
                                     <button>GitHub</button>
                                 </a>
                                 <a target="_blank">
@@ -60,7 +61,7 @@ export function Sobre() {
                                 <a href="https://github.com/tavaresmateus" target="_blank">
                                     <button>GitHub</button>
                                 </a>
-                                <a href="" target="_blank">
+                                <a target="_blank">
                                     <button>Linkedin</button>
                                 </a>
                             </Buttons>
@@ -86,7 +87,7 @@ export function Sobre() {
     }
     return (
         <Container>
-            <h2>"Menu"</h2>
+            <Navbar/>
             <Content>
                 <header>
                     <span onClick={() => setSelected("Sobre")}>Sobre</span>

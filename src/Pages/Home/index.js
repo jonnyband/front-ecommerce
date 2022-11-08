@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import {Buffer} from 'buffer';
 import {getProduct} from "../../Service/productService";
 import { Card } from "../../Components/Produtos/ApresentacaoProdutos";
-import {Container, ProductRow} from "./styled"
+import {Container, ProductRow,Div} from "./styled"
 import { BsCart } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from "../../Components/Navegacao/Navbar";
+import { Content } from "../SobreNos/styled";
 
 export function Home(){
 const navigate = useNavigate();
@@ -31,13 +33,10 @@ console.log(product)
 
 
 return(
-    
-    <Container><button onClick={()=> {navigate('/carrinho')}}>
-        <BsCart ></BsCart>
-        </button>
-        <button onClick={()=> {navigate('/cadastro')}}>
-        Cadastre-se
-        </button>
+    <>
+    <Div>
+    <Navbar/>
+    <Container>
       {product.map((p)=>{
         return(
             <Card
@@ -46,6 +45,8 @@ return(
         )
       })}
     </Container>
+    </Div>
+    </>
 )
 
 

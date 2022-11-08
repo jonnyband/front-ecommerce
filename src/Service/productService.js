@@ -14,8 +14,8 @@ export const getProductByID = (id) =>{
 }
 
 
-export const putProductByID = (product) =>{
-    return api.put(`produtos/${product.id}`, {data:{body:JSON.stringify(product)}})
+export const putProduct = (product) =>{
+    return api.put(`produtos/${product.id}`, product)
 }
 
 

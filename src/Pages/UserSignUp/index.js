@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { api } from "../../Service/api";
-import { Container } from "./styled";
+import { Container, Div } from "./styled";
 import { postAddress, postUser} from "../../Service/userService";
+import { Navbar } from "../../Components/Navegacao/Navbar";
 
 export function SignUp(){
 
@@ -34,8 +35,7 @@ const [address, setAddress] = useState( {
 });
 
 
-const submitAddress = (e) =>{
-e.preventDefault();
+const submitAddress = () =>{
     postAddress(address).then(
         response => {
             setUser({...user, endereco:{id: response.data.id}})
@@ -47,6 +47,7 @@ e.preventDefault();
 
 const submitUser = (e) =>{
   e.preventDefault();
+  submitAddress()
     postUser(user).then(
      console.log("Usuario cadastrado com sucesso!") 
     ).catch(error=>{
@@ -56,8 +57,11 @@ const submitUser = (e) =>{
 }
 
 return(
+  <>
+  <Div>
+  <Navbar/>
+  </Div>
 <Container>
-
 
 <form onSubmit={submitUser}>
   <label >Nome de Usuário:</label><br></br>
@@ -75,20 +79,18 @@ return(
   <input type="text"  value={user.telefone} onChange={(e)=>setUser({...user, telefone:e.target.value})}></input><br></br>
   <label for="lname">Data de Nascimento:</label><br></br>
   <input type="text"  value={user.dataNascimento} onChange={(e)=>setUser({...user, dataNascimento:e.target.value})}></input><br></br>
-  <input type="submit" value="Submit"></input>
-</form> 
-
-<form onSubmit={submitAddress}>
   <label >CEP:</label><br></br>
   <input type="text" value={address.cep} onChange={(e)=>setAddress({...address, cep:e.target.value})}></input><br></br>
   <label for="lname">Número:</label><br></br>
   <input type="text" value={address.numero} onChange={(e)=>setAddress({...address, numero:e.target.value})}></input><br></br>
   <label >Complemento:</label><br></br>
   <input type="text" value={address.complemento} onChange={(e)=>setAddress({...address, complemento:e.target.value})}></input><br></br>
-  <input type="submit" value="Submit"></input>
-</form> 
+  <input type="submit" value="Enviar"></input>
+</form>
 
 </Container>
+
+</>
 
 )
 }

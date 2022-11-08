@@ -6,7 +6,7 @@ flex-direction: column;
 background: #015958;
 height: 100vh;
 color: white;
-align-items: center;
+
 `;
 
 export const Content = styled.div`
@@ -17,6 +17,7 @@ flex-direction: column;
 background-color: #0E3B43;
 margin-top: 20px;
 margin-bottom: 10px;
+
 
 span{
     font-size: 25px;
@@ -36,19 +37,21 @@ header{
 `;
 
 export const Card = styled.div`
-border:  2px solid white;
+border:  2px solid;
 border-radius: 10px 10px 10px 10px;
 padding: 5px 5px 5px 5px;
 display: flex;
+flex-direction: row;
 align-items: center;
+justify-content: center;
 background-color: #023535;
 width: 65vh;
 height: 15vh;
 text-align: center;
 margin-bottom: 20px;
+box-shadow: 0px -1px 14px 2px black;
 
 img{
-    margin: 15px;
     border-radius: 50%;
     height: 12vh;
     width: 12vh;
@@ -57,11 +60,11 @@ img{
 } 
 
 h1{
-    font-size: 25px;
+    font-size: 1.2rem;
     padding: 10px 10px 10px 10px;
     display: inline-block;
     position: relative;
-    bottom: 40px;
+
 }
 `;
 
@@ -93,7 +96,10 @@ button{
 export const Div = styled.div`
    width: 100%;
    height: 100%;
-   margin-left: -50px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin-left: 5vh;
 `;
 
 export const Header = styled.div`

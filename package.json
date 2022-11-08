@@ -12,7 +12,12 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.4.3",
+<<<<<<< HEAD
     "react-scripts": "^5.0.1",
+=======
+    "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.1",
+>>>>>>> ca3eef5cbb38919a9d5cdf9a1654af9e55a01d00
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
