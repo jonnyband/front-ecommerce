@@ -30,10 +30,10 @@ h3{
 }
 
 button{
-    height: 4vh;
-    width: 15vh;
-    margin-left: 30vh;
-    margin-top: 7vh ;
+    height: 4.5vh;
+    width: 8vh;
+    margin-left: 20vh;
+    margin-top: 2vh ;
     border: 2px solid black;
     border-radius: 10px;
     color: white;
@@ -47,4 +47,27 @@ button{
     }  
 }
 `
+export const Div = styled.div`
+button{
+    height: 6vh;
+    width: 10vh;
+    margin-left: 2vh;
+    margin-top: 2vh ;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.05rem;
+    background-color: #0E3B43;
+    box-shadow: 0px 0px 3.5px 0.9px black;
+    
+    cursor: pointer;
+    :hover{
+    opacity: 0.8;
+    }  
+}
+    h1{
+        padding-left: 1.6vh;
+        padding-top: 1vh;
+    }
+`;
 

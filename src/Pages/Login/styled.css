@@ -21,11 +21,12 @@ body, html {
   align-items: center;
   justify-content: center;
   padding: 15px;
+     
 }
 
 .wrap-login {
   width: 390px;
-  background-color: #333;
+  background-color: #0E3B43;
   border-radius: 10px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;
@@ -40,7 +41,7 @@ body, html {
   font-family: Nunito, sans-serif;
   display: block;
   font-size: 30px;
-  color: azure;
+  color: #d6edff;
   line-height: 1.2;
   text-align: center;
   margin-bottom: 30px;
@@ -49,7 +50,7 @@ body, html {
 .wrap-input {
   width: 100%;
   position: relative;
-  border-bottom: 2px solid #adadad;
+  border-bottom: 2px solid #d6edff;
   margin-bottom: 37px;
 }
 
@@ -90,7 +91,7 @@ body, html {
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
-  background: #6a7dfe;
+  background: white;
 }
 
 .focus-input::after {
@@ -109,6 +110,7 @@ body, html {
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
+  
 }
 
 .input:focus {
@@ -137,6 +139,9 @@ body, html {
   justify-content: center;
   padding-bottom: 13px;
 }
+.container-login-form-btn:hover{
+    opacity: 0.7;
+    } 
 
 .login-form-btn {
   font-size: 15px;

@@ -14,14 +14,14 @@ margin: 12px;
 font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 
 img{
-    height: 20vh;
-    width: 20vh;
+    height: 13vh;
+    width: 13vh;
     border-radius: 4px;
 
 }
 
 h1{
-    margin-top: 0;
+    margin-top: 2px;
 }
 
 div{
@@ -41,8 +41,8 @@ text-align: end;
 button{
     height: 6vh;
     width: 15vh;
-    margin-left: 30vh;
-    margin-top: 7vh ;
+    margin-left: 20vh;
+    margin-top: 1vh ;
     border: 2px solid black;
     border-radius: 10px;
     color: white;
