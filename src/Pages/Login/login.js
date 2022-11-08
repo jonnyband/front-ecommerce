@@ -29,11 +29,11 @@ export const Login = () => {
 
    function handleSubmit(e){
 e.preventDefault();
-    localStorage.setItem('id',email)
+  
     getUserByID(parseInt(email)).then(
       response => {
         localStorage.setItem('logado', true)
-    localStorage.setItem('id', response.data.id)
+    localStorage.setItem('user', response.data)
     navigate('/')}
     
     ).catch((error)=>console.log(error))

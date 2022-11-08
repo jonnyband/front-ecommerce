@@ -1,5 +1,17 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
-background-color: #0E3B43;
+const GlobalStyle = createGlobalStyle`
+body{
+background-color: #015958;
+}
 `;
+
+
+
+
+
+
+
+
+
+export default GlobalStyle;

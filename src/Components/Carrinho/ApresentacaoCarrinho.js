@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from "react";
-import { RemoverDoCarrinho } from '../Carrinho/RemoverDoCarrinho';
 import {Context} from '../../Contexts/';
 import { Container } from "./styled";
 import { postOrder } from "../../Service/pedidoService";

@@ -45,19 +45,20 @@ function deleteU(id){
 
     return(
         <Container>
-            <h1>{user.nomeCompleto}</h1>
-            <h4>nome de Usuario: {user.nomeUsuario}</h4>
-            <h4>cpf: {user.cpf}</h4>
-            <h4>telefone: {user.telefone}</h4>
-            <h4>data de nascimento: {formatDate(user.dataNascimento)}</h4>
-            <h4>cep: {user.endereco.cep}</h4>
-            <h4>rua: {user.endereco.rua}</h4>
-            <h4>bairro: {user.endereco.bairro}</h4>
-            <h4>cidade: {user.endereco.cidade}</h4>
-            <h4>numero: {user.endereco.numero}</h4>
-            <h4>complemento: {user.endereco.complemento}</h4>
-            <h4>uf: {user.endereco.uf}</h4>
-         <button onClick={()=>deleteU(user.id)}>Apagar conta</button>
+            <h1>{user?.nomeCompleto}</h1>
+            <h4>nome de Usuario: {user?.nomeUsuario ?? "Carregando"}</h4>
+            <h4>cpf: {user?.cpf ?? "Carregando"}</h4>
+            <h4>telefone: {user?.telefone ?? "Carregando"}</h4>
+            <h4>data de nascimento: {formatDate(user?.dataNascimento) ?? "Carregando"}</h4>
+            {/* <h4>cep: {user?.endereco.cep ?? "Carregando"}</h4>
+            <h4>rua: {user?.endereco.rua ?? "Carregando"}</h4>
+            <h4>bairro: {user?.endereco.bairro ?? "Carregando"}</h4>
+            <h4>cidade: {user?.endereco.cidade ?? "Carregando"}</h4>
+            <h4>numero: {user?.endereco.numero ?? "Carregando"}</h4>
+            <h4>complemento: {user?.endereco.complemento ?? "Carregando"}</h4>
+            <h4>uf: {user?.endereco.uf ?? "Carregando"}</h4> */}
+         <button onClick={()=>deleteU(user?.id)}>Apagar conta</button>
         </Container>
+        
     )
 }
