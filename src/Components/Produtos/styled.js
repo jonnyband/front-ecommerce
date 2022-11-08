@@ -5,12 +5,13 @@ width: 80vh;
 height: 20vh;
 display: flex;
 flex-direction: row;
-background-color: gainsboro;
+background-color: #A1BDD0;
+box-shadow: 0px -1px 8px 3px black;
 padding: 5vh;
 border-radius: 4px;
-border: 2px solid black;
-margin: 2px;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+border: 2px solid d6edff;
+margin: 12px;
+font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 
 img{
     height: 20vh;
@@ -28,6 +29,10 @@ div{
     padding: 10px;
 }
 
+span{
+    font-size: 1.15rem;
+}
+
 `
 
 export const Div = styled.div`
@@ -38,11 +43,12 @@ button{
     width: 15vh;
     margin-left: 30vh;
     margin-top: 7vh ;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 10px;
     color: white;
     font-size: 1.2rem;
-    background-color: #3BB273;
+    background-color: #0E3B43;
+    box-shadow: 0px 0px 3.5px 0.8px black;
     
     cursor: pointer;
     :hover{
@@ -53,5 +59,7 @@ span{
     font-size: 2.5rem;
 }
 `;
+
+
 
 

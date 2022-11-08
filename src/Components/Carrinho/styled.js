@@ -7,11 +7,12 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: flex-start;
-background-color: gainsboro;
-padding: 5vh;
+background-color: #A1BDD0;
+box-shadow: 0px 0px 7px 1px black;
+padding: 6vh;
 border-radius: 4px;
 border: 2px solid black;
-margin: 2px;
+margin: 18px;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 img{
@@ -29,19 +30,21 @@ h3{
 }
 
 button{
-    height: 3.5vh;
-    width: 9vh;
+    height: 4vh;
+    width: 15vh;
     margin-left: 30vh;
-    border: 2px solid white;
+    margin-top: 7vh ;
+    border: 2px solid black;
     border-radius: 10px;
     color: white;
-    font-size: 1rem;
-    background-color: #F87060;
-
+    font-size: 1.05rem;
+    background-color: #0E3B43;
+    box-shadow: 0px 0px 3.5px 0.9px black;
+    
     cursor: pointer;
     :hover{
-    opacity: 0.6;
-    } 
-
+    opacity: 0.8;
+    }  
 }
 `
+
