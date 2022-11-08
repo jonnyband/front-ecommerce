@@ -7,7 +7,7 @@ export const RemoverDoCarrinho = ({item}) => {
 
     return (
         <>
-            <button onClick={() => removeProduct(item.produto.id)}>Remover</button>
+            <button onClick={() => removeProduct(item.produto.id)}><strong>Remover</strong></button>
         </>
     )
 }

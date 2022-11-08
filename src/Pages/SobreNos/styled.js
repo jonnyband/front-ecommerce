@@ -6,6 +6,7 @@ flex-direction: column;
 background: #015958;
 height: 100vh;
 color: white;
+
 `;
 
 export const Content = styled.div`
@@ -16,6 +17,7 @@ flex-direction: column;
 background-color: #0E3B43;
 margin-top: 20px;
 margin-bottom: 10px;
+
 
 span{
     font-size: 25px;
@@ -35,7 +37,7 @@ header{
 `;
 
 export const Card = styled.div`
-border:  2px solid white;
+border:  2px solid;
 border-radius: 10px 10px 10px 10px;
 padding: 5px 5px 5px 5px;
 display: flex;
@@ -45,6 +47,7 @@ width: 65vh;
 height: 15vh;
 text-align: center;
 margin-bottom: 20px;
+box-shadow: 0px -1px 14px 2px black;
 
 img{
     margin: 15px;

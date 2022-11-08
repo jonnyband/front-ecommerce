@@ -9,7 +9,7 @@ export const AdicionarNoCarrinho = ({ product }) => {
         addProduct(product)
     }
 
-    return (
+    return(
         <>
             <button onClick={() => add(product)}>
                 <strong>Adicionar ao carrinho</strong>

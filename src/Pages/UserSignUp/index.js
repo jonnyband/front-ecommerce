@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { api } from "../../Service/api";
-import { Container } from "./styled";
+import { Container, Div } from "./styled";
 import { postAddress, postUser} from "../../Service/userService";
 import { Navbar } from "../../Components/Navegacao/Navbar";
 
@@ -58,7 +58,9 @@ const submitUser = (e) =>{
 
 return(
   <>
+  <Div>
   <Navbar/>
+  </Div>
 <Container>
 
 <form onSubmit={submitUser}>
@@ -77,7 +79,7 @@ return(
   <input type="text"  value={user.telefone} onChange={(e)=>setUser({...user, telefone:e.target.value})}></input><br></br>
   <label for="lname">Data de Nascimento:</label><br></br>
   <input type="text"  value={user.dataNascimento} onChange={(e)=>setUser({...user, dataNascimento:e.target.value})}></input><br></br>
-  <input type="submit" value="Submit"></input>
+  <input type="submit" value="Enviar"></input>
 </form> 
 
 <form onSubmit={submitAddress}>
@@ -87,10 +89,11 @@ return(
   <input type="text" value={address.numero} onChange={(e)=>setAddress({...address, numero:e.target.value})}></input><br></br>
   <label >Complemento:</label><br></br>
   <input type="text" value={address.complemento} onChange={(e)=>setAddress({...address, complemento:e.target.value})}></input><br></br>
-  <input type="submit" value="Submit"></input>
+  <input type="submit" value="Enviar"></input>
 </form> 
 
 </Container>
+
 </>
 
 )
