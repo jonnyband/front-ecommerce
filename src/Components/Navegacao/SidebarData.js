@@ -13,8 +13,8 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Cadastro',
-        path: '/cadastro',
+        title: 'Login',
+        path: '/login',
         icon: <BsFillPeopleFill />,
         cName: 'nav-text'
     },

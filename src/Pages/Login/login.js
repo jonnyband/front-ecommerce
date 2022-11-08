@@ -10,40 +10,41 @@ export const Login = () => {
 
     const navigate = useNavigate()
 
-    useEffect(() => {
-        getClienteAPI()
-    }, [])
+    // useEffect(() => {0
+    //     getClienteAPI()
+    // }, [])
 
-    function getClienteAPI() {
-        getUserByID()
-            .then(res => {
-                setClientes(res.data)
-                console.log(res)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    }
+    // function getClienteAPI() {
+    //     getUserByID()
+    //         .then(res => {
+    //             setClientes(res.data)
+    //             console.log(res)
+    //         })
+    //         .catch(err => {
+    //             console.log(err)
+    //         })
+    // }
 
-    const handleSubmit = e => {
-        e.preventDeFault()
-        console.log('submit', {email, password})
-        clientes.forEach(element => {
-            if (email === element.email) {
-                if (password === element.password) {
-                    localStorage.setItem('logado', 'sim')
-                    navigate('/')
-                    document.location.reload()
-                }
-            }
-        })
-    }
+    
+
+   function handleSubmit(e,password){
+    e.preventDefault()
+    console.log('submit', {email, password})
+    getUserByID(14).then(
+      response => {setClientes(response.data)
+        localStorage.setItem('logado', true)
+    localStorage.setItem('id', clientes.id)
+    navigate('/')}
+    
+    ).catch((error)=>console.log(error))
+
+   }
 
     return (
             <div className="container">
               <div className="container-login">
                 <div className="wrap-login">
-                  <form className="login-form">
+                  <form onSubmit={handleSubmit} className="login-form">
                     <span className="login-form-title"> Faça o seu login </span>
         
                     <div className="wrap-input">
@@ -59,7 +60,7 @@ export const Login = () => {
                     <div className="wrap-input">
                       <input
                         className={password !== "" ? "has-val input" : "input"}
-                        type="password"
+                    
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                       />

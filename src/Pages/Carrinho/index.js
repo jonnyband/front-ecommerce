@@ -16,7 +16,7 @@ export const Carrinho = () => {
                 <div>
                     <BarraDePesquisa />
                     <ApresentacaoCarrinho />
-                    <FecharPedido />
+                 
                 </div>
             </Container>
         </>

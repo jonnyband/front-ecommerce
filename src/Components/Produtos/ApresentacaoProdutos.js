@@ -1,5 +1,6 @@
 import React from "react";
 import { AdicionarNoCarrinho } from "../Carrinho/AdicionarNoCarrinho"
+import {getProduct, setProduct} from "../../Service/productService";
 import { Container, Div } from "./styled";
 import { Navbar } from "../Navegacao/Navbar";
 
