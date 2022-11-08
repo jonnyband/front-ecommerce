@@ -34,12 +34,7 @@ console.log(product)
 return(
     <>
     <Navbar/>
-    <Container><button onClick={()=> {navigate('/carrinho')}}>
-        <BsCart ></BsCart>
-        </button>
-        <button onClick={()=> {navigate('/cadastro')}}>
-        Cadastre-se
-        </button>
+    <Container>
       {product.map((p)=>{
         return(
             <Card

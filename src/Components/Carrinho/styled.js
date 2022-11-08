@@ -29,13 +29,19 @@ h3{
 }
 
 button{
-    height: 3vh;
-    width: 7.5vh;
+    height: 3.5vh;
+    width: 9vh;
     margin-left: 30vh;
     border: 2px solid white;
     border-radius: 10px;
     color: white;
     font-size: 1rem;
     background-color: #F87060;
+
+    cursor: pointer;
+    :hover{
+    opacity: 0.6;
+    } 
+
 }
 `
