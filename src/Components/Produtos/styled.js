@@ -36,7 +36,6 @@ span{
 `
 
 export const Div = styled.div`
-text-align: end;
 
 button{
     height: 6vh;

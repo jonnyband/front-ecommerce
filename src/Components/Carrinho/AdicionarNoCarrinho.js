@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
 import {Context} from '../../Contexts/';
 import { Navbar } from "../Navegacao/Navbar";
+import { ToastContainer, toast } from 'react-toastify';
 
 export const AdicionarNoCarrinho = ({ product }) => {
     const { addProduct } = useContext(Context)
 
     function add(product) {
         addProduct(product)
+        
     }
 
     return(
