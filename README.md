@@ -1,4 +1,4 @@
-# Projeto E-Commerce com Front-End
+# Projeto FrontEnd/E-commerce
 
 ## 📃 Descrição do Projeto:
 
@@ -12,10 +12,7 @@ Foi feito também a criação de páginas com uma barra de navegação para pode
 
 Projeto realizado pelos alunos do (Serratec - 2022.2): 
 
--Lucas Martins
--João Mario
--Pedro Cunha
--Mateus Tavares 
+-Lucas Martins, João Mario, Pedro Cunha, Mateus Tavares 
 
 -----------------------------------------------------------------------------------------------------
 
@@ -31,7 +28,7 @@ Processos para conseguir rodar o app:
 
 ## 🛠️ Construído com
 
-* [JavaScript] ( https://devdocs.io/javascript/ ) - Linguagem utilizada 
+* [JavaScript]( https://devdocs.io/javascript/ ) - Linguagem utilizada 
 * [React.Js](https://pt-br.reactjs.org) - A biblioteca utilizada 
 * [Maven](https://maven.apache.org/) - Gerente de Dependência
 
