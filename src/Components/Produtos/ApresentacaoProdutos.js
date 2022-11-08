@@ -1,10 +1,23 @@
-import React from "react";
-import { AdicionarNoCarrinho } from "../Carrinho/AdicionarNoCarrinho"
-import {getProduct, setProduct} from "../../Service/productService";
+import React, {useContext} from "react";
+import {Context} from '../../Contexts/';
 import { Container, Div } from "./styled";
-import { Navbar } from "../Navegacao/Navbar";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Card = ({ product }) => {
+
+    const { cart, addProduct } = useContext(Context)
+
+    function add(product) {
+       let d = cart.filter(e => e.produto.id !== product.id
+       
+        );
+
+        console.log(d)
+        addProduct(product)
+        toast.success('Adicionado ao Carrinho!')
+
+    }
     
     return (
         <>
@@ -18,11 +31,12 @@ export const Card = ({ product }) => {
         </div>
         <Div>
         <span>R${product.valorUnitario}</span>
-            <AdicionarNoCarrinho
-            product={product}
-            ></AdicionarNoCarrinho>
+        <button onClick={() => add(product)}>
+                <strong>Adicionar ao carrinho</strong>
+            </button>
+            
         </Div>
-        
+        <ToastContainer/>
         </Container>
         </>
     )
