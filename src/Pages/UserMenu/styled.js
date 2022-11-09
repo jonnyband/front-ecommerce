@@ -4,20 +4,22 @@ import styled from "styled-components";
 export const Container=styled.div`
 display: flex;
 flex-direction: column;
-background-color:  #015958;
+background-color: #A1BDD0;
 width: 30vh;
-height: 40vh;
+height: 80vh;
 margin: auto;
-margin-top: 10vh;
+margin-top: 10vh;       
+box-shadow: 0px -1px 8px 3px black;
+
 
 
 h1{
     padding:2vh;
-    color: white;
+    color: black;
 }
 
 h4{padding:2vh;
-color: white;
+color: black;
 }
 
 button{

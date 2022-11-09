@@ -6,6 +6,7 @@ height: 20vh;
 display: flex;
 flex-direction: row;
 background-color: #A1BDD0;
+align-items: center;
 box-shadow: 0px -1px 8px 3px black;
 padding: 5vh;
 border-radius: 4px;
@@ -26,7 +27,7 @@ h1{
 
 div{
     
-    padding: 10px;
+    padding-left: 2vh;
 }
 
 span{

@@ -4,6 +4,8 @@ import { Container, Div } from "./styled";
 import { postOrder } from "../../Service/pedidoService";
 import { putProduct } from "../../Service/productService";
 import { wait } from "@testing-library/user-event/dist/utils";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -49,11 +51,14 @@ export const ApresentacaoCarrinho = () => {
 
 
     function orderTotal() {
-        return cart.length > 0 ?
-            cart.length > 1 ?
-                cart.reduce((a, b) => { return (a.quantidade * a.valorBruto) + (b.quantidade * b.valorBruto) })
-                : cart[0].quantidade * cart[0].valorBruto
-            : 0
+
+        let soma = 0
+        cart.map(c => {
+            soma += c.valorBruto * c.quantidade
+        })
+        return soma;
+
+
     }
 
 
@@ -72,7 +77,9 @@ export const ApresentacaoCarrinho = () => {
             }
                 ,
 
-                removeAllProducts()))
+                removeAllProducts())
+        )
+
     }
 
 
@@ -111,9 +118,10 @@ export const ApresentacaoCarrinho = () => {
 
             )}
             <Div>
-                <button onClick={() => buyOrder(order)} ><strong>Finalizar Pedido</strong></button>
+                <button onClick={() => { buyOrder(order) }} ><strong>Finalizar Pedido</strong></button>
                 <h1>R${isNaN(fullPrice) ? 0 : fullPrice}.00</h1>
             </Div>
+            <ToastContainer />
         </>
     )
 }

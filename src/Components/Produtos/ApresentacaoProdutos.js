@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import {Context} from '../../Contexts/';
 import { Container, Div } from "./styled";
 import { ToastContainer, toast } from 'react-toastify';
@@ -9,13 +9,19 @@ export const Card = ({ product }) => {
     const { cart, addProduct } = useContext(Context)
 
     function add(product) {
-       let d = cart.filter(e => e.produto.id !== product.id
-       
-        );
+        let con;
+        cart.map((c)=>{if(c.produto.id === product.id){con=true}})
+        
+        if(con){
+            
+            toast.error('Item já está em seu Carrinho!')
+        }else{
+            addProduct(product)
+            toast.success('Adicionado ao Carrinho!')
+        }
+        
 
-        console.log(d)
-        addProduct(product)
-        toast.success('Adicionado ao Carrinho!')
+       
 
     }
     

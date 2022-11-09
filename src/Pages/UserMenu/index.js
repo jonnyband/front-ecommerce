@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getUserByID, deleteUser } from "../../Service/userService";
 import { Container } from "./styled";
+import { Navbar } from "../../Components/Navegacao/Navbar";
 
 
 export function UserMenu(){
@@ -44,21 +45,24 @@ function deleteU(id){
 
 
     return(
+        <>
+        <Navbar/>
         <Container>
+             
             <h1>{user?.nomeCompleto}</h1>
             <h4>nome de Usuario: {user?.nomeUsuario ?? "Carregando"}</h4>
             <h4>cpf: {user?.cpf ?? "Carregando"}</h4>
             <h4>telefone: {user?.telefone ?? "Carregando"}</h4>
             <h4>data de nascimento: {formatDate(user?.dataNascimento) ?? "Carregando"}</h4>
-            {/* <h4>cep: {user?.endereco.cep ?? "Carregando"}</h4>
-            <h4>rua: {user?.endereco.rua ?? "Carregando"}</h4>
-            <h4>bairro: {user?.endereco.bairro ?? "Carregando"}</h4>
-            <h4>cidade: {user?.endereco.cidade ?? "Carregando"}</h4>
-            <h4>numero: {user?.endereco.numero ?? "Carregando"}</h4>
-            <h4>complemento: {user?.endereco.complemento ?? "Carregando"}</h4>
-            <h4>uf: {user?.endereco.uf ?? "Carregando"}</h4> */}
+            <h4>cep: {user?.endereco?.cep ?? "Carregando"}</h4>
+            <h4>rua: {user?.endereco?.rua ?? "Carregando"}</h4>
+            <h4>bairro: {user?.endereco?.bairro ?? "Carregando"}</h4>
+            <h4>cidade: {user?.endereco?.cidade ?? "Carregando"}</h4>
+            <h4>numero: {user?.endereco?.numero ?? "Carregando"}</h4>
+            <h4>complemento: {user?.endereco?.complemento ?? "Carregando"}</h4>
+            <h4>uf: {user?.endereco?.uf ?? "Carregando"}</h4>
          <button onClick={()=>deleteU(user?.id)}>Apagar conta</button>
         </Container>
-        
+        </>
     )
 }
